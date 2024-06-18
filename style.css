@@ -1,0 +1,495 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: #817f7f;
+  font-family: Arial, sans-serif;
+}
+.navbar, .contact, .home, .about-section, .services, .skills{
+  width: 100%;
+  /* padding:5% 5% 0 5%; */
+  
+}
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(198, 198, 198);;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  
+}
+.left {
+  color: #140b12;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.toggle-button {
+  display: none; /* Initially hide the toggle button */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.toggle-button .line {
+  width: 100%;
+  height: 3px;
+  background-color: #140b12;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+}
+.right a {
+  /* float: left;
+  color: #140b12;
+  text-align: center;
+  padding: 15px 0px 0px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  font-size: large; */
+  padding: 10px 20px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+.left{
+  padding: 15px 10px 10px 20px;
+  color: #140b12;
+  font-size: 17px;
+  text-decoration: none;
+  font-size: large;
+  overflow: hidden;
+}
+
+a:hover{
+  color:rgb(116, 20, 116);
+  font-weight:600;
+}
+a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+a:hover:after {
+  width: 100%;
+  background: rgb(116, 20, 116);
+} 
+.bg-clr img{
+  height: 33.5vh;
+  width: 23.5vw;
+  margin: 15px 30px 0 15px;
+  border-radius: 10%;
+  border: 5px solid grey;
+  box-shadow: 10px 5px 10px 0 rgba(0, 0, 0, 0.5);
+   
+}    
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(156, 150, 150, 0.5);
+    color: white;
+    overflow: hidden;
+}
+.popup-content {
+  text-align: center;
+
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+button {
+  /* font-size: 16px; */
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(198, 198, 198);
+}
+button img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.home,.about,.services,.skills,.contact{
+  display: flex;   
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.contact{
+  text-align: center;
+}
+h1{
+  font-size: x-large;
+  color:rgb(3, 19, 88);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.about-text{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 10px;
+}
+.about-text{
+  width: 100%;  
+  padding: 0 5% 0 5%;
+  font-size:large;
+  font-weight: 300;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.left-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  justify-content: space-between;
+  color: rgb(86, 104, 110);
+  font-size: medium;
+  font-weight: 800;
+}
+.about-text{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 10px;
+  color: rgb(223, 217, 228);
+}
+.home p{
+  text-align: justify;
+}
+
+.about-section,.services,.skills{
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.skills{
+  gap: 0px;
+}
+.about{
+  width: 100%;
+  padding:0 5% 0 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  text-align: justify;
+
+}
+.education{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  text-align: center;
+  gap: 10px;
+}
+.mca{
+  height: 150px;
+  width: 25vw;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: ghostwhite;
+  gap: 15px;
+  border-radius: 8px;
+} 
+.mca h3{
+  color: rgb(48, 45, 45);
+  font-weight: 500;
+  font-size: larger;
+}
+.mca p{
+  color: rgb(48, 48, 48);
+  font-weight: 100;
+  font-size:medium ;
+}
+.about-me p{
+  display: flex;
+  text-align: justify;
+  
+}
+
+.card-area{
+  width: 100%;
+  padding: 0 5% 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+.services{
+  /* padding: 5%; */
+}
+.card{
+  width: 100%;
+  border: 5px solid purple;
+  border-radius: 20px;
+  background-color: rgb(56, 63, 63);
+  padding: 3% 2%;
+}
+.card P,img,h3,.btn{
+  margin-left: 10px;
+}
+.card p{
+  text-align:start;
+  font-size: medium;
+  font-weight: 300;
+  font-style: italic;
+}
+.card h3{
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+}
+P{
+  color: white;
+}
+.btn{
+  height: 40px;
+  width: 100px;
+  background-color: rgb(108, 97, 108);
+  border:2px solid purple;
+  margin: 20px 50px 0 10px; 
+  color: rgb(255, 225, 225);
+  border-radius: 10px;
+  margin-left: 25%;
+  font-size: medium;
+  font-weight: 700;
+  margin-top:50px;
+}
+.db{
+  padding-top: 10px;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.skill-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.skills{
+  width: 100%;
+  padding:5% 5% 0 5%;
+  
+}
+.html,.css,.js,.php,.laravel,.c,.cpp,.ds{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 40px;
+  gap: 2px;
+}
+.skill-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skill-name p{
+  color: rgb(2, 10, 17);
+}
+.communication p{
+  color: #e3e3e3;;
+}
+.range {
+  width: 90%; /* Adjust width as needed */
+  height: 8px; /* Adjust height as needed */
+  background-color: black; /* Background color of the range */
+  border-radius: 10px; /* Rounded corners */
+  position: relative; /* Needed for positioning the filled part */
+}
+.total-range {
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  height: 8px;
+  background-color: #2f5230; /* Fill color */
+  border-radius: 10px; /* Rounded corners */
+}
+.html-skill{
+  width: 90%;
+}
+.css-skill{
+  width: 85%;
+}
+.js-skill{
+  width: 85%;
+}
+.laravel-skill{
+  width: 85%;
+}
+.php-skill{
+  width: 90%;
+}
+.css-skill{
+  width: 75%;
+}
+.c-skill{
+  width: 80%;
+}
+.cpp-skill{
+  width: 85%;
+}
+.ds-skill{
+  width: 70%;
+}
+.technical{
+  color: #0e0113;
+}
+.professional{
+  color: #0e0113;
+}
+.professional-skill{
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  row-gap: 20px;
+
+}
+.communication{
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+.range-container{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 10px solid rgb(81, 81, 81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  text-align: center;
+}
+.range-container:hover{
+  border: 10px solid  #2f5230;;
+  p{
+    color:  #2f5230;
+    font-weight: bolder;
+  }
+  
+}
+
+.contact-form {
+  height: 92%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+    /* max-width: 100%; */
+  text-align: center;
+  margin-left: 5%;    
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.contact-form textarea {
+
+  resize: none;
+}
+.contact-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.contact-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.social{
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  gap: 40px;
+  float: left;
+  margin-right: 5%;
+ 
+}
+.social-icon{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+ 
+}
+.social a{
+  height: 30px;
+}
+.custom-icon {
+  font-size: 2rem; /* Adjust as needed */
+}
+.contact-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
